@@ -1,0 +1,29 @@
+body{
+  background-color: grey !important;
+}
+
+.col-6{
+  background-color: rgb(79, 78, 78) !important;
+  padding: 30px 50px 40px 30px !important;
+  border: 5px solid rgb(17, 17, 17) !important;
+  border-radius: 5% !important;
+}
+
+input{
+  background-color: rgb(228, 224, 224) !important;
+}
+
+.card{
+  background-color: lightcoral !important;
+}
+
+.card-title{
+  color: rgb(37, 3, 68) !important;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+  font-weight: bolder !important;
+}
+
+.card-text{
+  color: rgb(8, 8, 8) !important;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+}

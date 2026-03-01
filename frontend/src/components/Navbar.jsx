@@ -1,0 +1,33 @@
+import React from 'react'
+import {NavLink} from 'react-router-dom'
+
+const Navbar = () => {
+  return (
+    <>
+      <nav
+        className="navbar navbar-expand-sm navbar-dark bg-dark"
+      >
+        <div className="container">
+            
+            <div className="collapse navbar-collapse" id="collapsibleNavId">
+                <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li className="nav-item">
+                        <NavLink className="nav-link " to="/" aria-current="page"
+                            >Home
+                            <span className="visually-hidden">(current)</span></NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="add">Add Album</NavLink>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+      </nav>
+      
+    </>
+  )
+}
+
+export default Navbar
