@@ -9,8 +9,6 @@ import ShowAlbum from './components/ShowAlbum'
 import EditAlbum from './components/EditAlbum'
 import './App.css'
 
-gsap.registerPlugin(ScrollTrigger)
-
 const App = () => {
   return (
     <BrowserRouter>
