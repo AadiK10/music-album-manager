@@ -1,29 +1,69 @@
-body{
-  background-color: grey !important;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.col-6{
-  background-color: rgb(79, 78, 78) !important;
-  padding: 30px 50px 40px 30px !important;
-  border: 5px solid rgb(17, 17, 17) !important;
-  border-radius: 5% !important;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
 }
 
-input{
-  background-color: rgb(228, 224, 224) !important;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.card{
-  background-color: lightcoral !important;
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.card-title{
-  color: rgb(37, 3, 68) !important;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
-  font-weight: bolder !important;
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
 }
 
-.card-text{
-  color: rgb(8, 8, 8) !important;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
