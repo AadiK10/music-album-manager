@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { BASE_URL } from '../config'
 
 const EditAlbum = () => {
     const { id } = useParams()
@@ -17,7 +18,7 @@ const EditAlbum = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/${id}`)
+        axios.get(`${BASE_URL}/${id}`)
             .then((result) => {
                 setAlbum(result.data)
                 setLoading(false)
@@ -31,7 +32,7 @@ const EditAlbum = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setIsSubmitting(true)
-        axios.put(`http://localhost:5000/${id}`, album)
+        axios.put(`${BASE_URL}/${id}`, album)
             .then((result) => {
                 navigate(`/show/${id}`)
             })

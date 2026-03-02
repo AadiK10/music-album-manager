@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { BASE_URL } from '../config'
 
 const ShowAlbum = () => {
     const [album, setAlbum] = useState({})
@@ -10,7 +11,7 @@ const ShowAlbum = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/${id}`)
+        axios.get(`${BASE_URL}/${id}`)
             .then((result) => {
                 setAlbum(result.data)
                 setLoading(false)
@@ -23,7 +24,7 @@ const ShowAlbum = () => {
 
     const handleDelete = () => {
         if (window.confirm('Are you sure you want to delete this album?')) {
-            axios.delete(`http://localhost:5000/${id}`)
+            axios.delete(`${BASE_URL}/${id}`)
                 .then((result) => {
                     navigate("/")
                 })

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { BASE_URL } from '../config'
 
 const AddAlbum = () => {
     const [album, setAlbum] = useState({
@@ -18,7 +19,7 @@ const AddAlbum = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         setIsSubmitting(true)
-        axios.post("http://localhost:5000/", album)
+        axios.post(`${BASE_URL}`, album)
             .then((result) => {
                 navigate("/")
             })

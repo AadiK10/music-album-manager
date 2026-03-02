@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BASE_URL } from '../config'
 
 const Home = () => {
     const [albums, setAlbums] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get("http://localhost:5000")
+        axios.get(`${BASE_URL}`)
             .then((result) => {
                 setAlbums(result.data)
                 setLoading(false)
@@ -44,20 +45,9 @@ const Home = () => {
     if (loading) {
         return (
             <div className="container mt-5 text-center">
-                <motion.div
-                    animate={{
-                        scale: [1, 1.2, 1],
-                        rotate: [0, 180, 360]
-                    }}
-                    transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                    style={{ fontSize: '4rem' }}
-                >
-                    🎵
-                </motion.div>
+                <div className="spinner-border text-primary" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
             </div>
         )
     }
