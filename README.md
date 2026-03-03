@@ -27,7 +27,7 @@ A full-stack web application to manage music albums where users can add, view, u
 
 ---
 
-### 📀 Show All Albums
+### 📀 Show Album
 ![Show Album](images/ShowAlbum.png)
 
 ---
